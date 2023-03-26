@@ -1,0 +1,76 @@
+/*Header Content*/
+
+.headerText {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: center;
+  font-size: 15px;
+}
+.contentHeader {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.iconNavbar {
+  align-items: center;
+}
+
+.iconNavbar img {
+  width: 25px;
+}
+
+/*LINE UP*/
+.lineNavbar {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: #efefef;
+}
+
+/* NAVBAR CONTENT*/
+.navbar {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-around;
+}
+
+.navbarLogo img {
+  width: 57px;
+  height: 57px;
+}
+
+.navbarLinks a {
+  font-size: 20px;
+  line-height: 24px;
+  color: #122138;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+
+.navbarLinks ul {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/*LINE DOWN*/
+.lineNavbarEnd {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #efefef;
+}
