@@ -16,6 +16,7 @@ function Navbar() {
         <div className={styles.navbar}>
           <div className={styles.navbarLogo}>
             <img src="../public/logo.png" />
+            <h2>AgendamentosPop</h2>
           </div>
           <div className={styles.navbarLinks}>
             <ul>
@@ -35,6 +36,9 @@ function Navbar() {
                 <a href="">Contato</a>
               </li>
             </ul>
+            <a href="#" className={styles.action_btn}>
+              Baixe Agora
+            </a>
           </div>
         </div>
         <div className={styles.lineNavbarEnd}></div>
