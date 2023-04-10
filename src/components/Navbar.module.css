@@ -1,3 +1,31 @@
+/* ICONS */
+.iconMenu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #efefef;
+  padding: 6px;
+  border-radius: 999px;
+}
+
+.iconMenu:hover {
+  border: 2px solid #ebebeb;
+}
+
+.iconMenu:active {
+  scale: 0.94;
+  border: 2px solid #ebebeb;
+}
+
+.iconMenu svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  color: #122138;
+}
+
 /*Header Content*/
 
 .headerText {
@@ -71,6 +99,7 @@
 .navbarLinks ul {
   display: flex;
   gap: 24px;
+  padding-right: 25px;
 }
 
 .navbarLinks {
@@ -88,17 +117,18 @@
 }
 
 .action_btn {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   color: #fff;
   letter-spacing: 1px;
   background: #3cc961;
-  margin-left: 20px;
   padding: 10px 25px;
   outline: none;
   border-radius: 30px;
   font-size: 20px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   text-transform: capitalize;
   font-weight: 500;
   cursor: pointer;
@@ -122,4 +152,61 @@
   width: 100%;
   height: 2px;
   background-color: #efefef;
+}
+
+/* RESPONSIVE */
+
+.NavbarResponsive {
+  display: none;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.boxMenuResponsive {
+  display: block;
+  position: absolute;
+  top: 150px;
+  padding: 15px 15px;
+  width: 300px;
+  border: 2px solid #efefef;
+  background: #fff;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  transition: heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navbarLinksResponsive {
+  color: #122138;
+  padding: 0.7rem;
+  display: flex;
+  gap: 17px;
+  font-size: 17px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 17px;
+}
+
+.navbarLinksResponsive a {
+  color: #122138;
+}
+
+.navbarLinksResponsive li:hover {
+  scale: 1.05;
+}
+
+.navbarLinksResponsive li:active {
+  scale: 0.94;
+}
+
+@media (max-width: 1350px) {
+  .navbarLinks {
+    display: none;
+  }
+
+  .iconMenu {
+    display: block;
+  }
 }
