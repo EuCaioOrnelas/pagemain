@@ -2,11 +2,14 @@ import styles from "./Navbar.module.css";
 
 import { BiMenu } from "react-icons/bi";
 import { useOutsideClick } from "./useOutsideClick";
+import { useState } from "react";
 
 function Navbar() {
-  /*const dropDownRef = useRef(null);
-  const [isActive, setIsActive] = useOutsideClick(dropDownRef, false);
-  const onClick = () => setIsActive(isActive);*/
+  const dropDownRef = useRef(null);
+  const [isActive, setIsActive] = useState(false);
+  const onClick = () => setIsActive(!isActive);
+
+  console.log(isActive);
 
   return (
     <>
@@ -48,37 +51,42 @@ function Navbar() {
                 Baixe Agora
               </a>
             </div>
-            <div className={styles.iconMenu} onClick={() => {}}>
+            <div className={styles.iconMenu} onClick={onClick}>
               <BiMenu />
             </div>
           </div>
 
           <div className={styles.lineNavbarEnd}></div>
         </div>
-        <div className={styles.NavbarResponsive}>
-          <div className={styles.boxMenuResponsive}>
-            <ul className={styles.navbarLinksResponsive}>
-              <li>
-                <a href="">Incio</a>
-              </li>
-              <li>
-                <a href="">Sobre</a>
-              </li>
-              <li>
-                <a href="">Vantagens</a>
-              </li>
-              <li>
-                <a href="">Planos</a>
-              </li>
-              <li>
-                <a href="">Contato</a>
-              </li>
-            </ul>
-            <a href="#" className={styles.action_btn}>
-              Baixe Agora
-            </a>
+        <nav
+          ref={dropDownRef}
+          className={`menuresponsive ${isActive ? "active" : "inactive"}`}
+        >
+          <div className={styles.NavbarResponsive}>
+            <div className={styles.boxMenuResponsive}>
+              <ul className={styles.navbarLinksResponsive}>
+                <li>
+                  <a href="">Incio</a>
+                </li>
+                <li>
+                  <a href="">Sobre</a>
+                </li>
+                <li>
+                  <a href="">Vantagens</a>
+                </li>
+                <li>
+                  <a href="">Planos</a>
+                </li>
+                <li>
+                  <a href="">Contato</a>
+                </li>
+              </ul>
+              <a href="#" className={styles.action_btn}>
+                Baixe Agora
+              </a>
+            </div>
           </div>
-        </div>
+        </nav>
       </header>
     </>
   );
